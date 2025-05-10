@@ -2,7 +2,7 @@ import random
 
 # words that user has to guess
 word_bank = ['twilight', 'vampires', 'lestat', 'akasha', 'claudia', 'garlic', 'nosferatu',
-             'dracula', 'orleans', 'nadja', 'nandor', 'lazlo', 'armand' 'stake' 'cullen' 'edward']
+             'dracula', 'orleans', 'nadja', 'nandor', 'lazlo', 'armand', 'stake', 'cullen', 'edward']
 
 # randomly select the word
 word = random.choice(word_bank)
@@ -15,9 +15,12 @@ attempts = 10
 
 # while there are still attempts
 while attempts > 0:
+
     # print out the letters available
     print('\nCurrent Word: ' + ' '.join(guessedWord))
+
     guess = input('Guess a letter: ')
+    
     # replace the blank spot in the letter
     if guess in word: 
         for i in range(len(word)):
@@ -34,4 +37,6 @@ while attempts > 0:
         break
     else:
         print('\nYou\'ve run out of attempts! The word was: ' + word)
+        
+
 
